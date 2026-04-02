@@ -1,0 +1,18 @@
+[package]
+name = "cipher-dlmm-jup"
+version = "0.1.0"
+edition = "2021"
+description = "Jupiter AMM adapter for CipherDLMM (Orbit Finance)"
+license = "Apache-2.0"
+
+[dependencies]
+jupiter-amm-interface = "=0.6.0"
+solana-sdk = "2.3"
+# Pin to 2.x to match solana-sdk 2.3 and avoid version conflicts
+# (3.x pulls solana-account v3.x which conflicts with solana-sdk's v2.x)
+solana-account-decoder = "2.2"
+anyhow = "1"
+rust_decimal = "1"
+ahash = "0.8"
+bytemuck = { version = "1", features = ["derive"] }
+uint = "0.10"
